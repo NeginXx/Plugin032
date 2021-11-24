@@ -154,11 +154,11 @@ class IPlugin {
     virtual std::list<IFilter*> GetFilters() const = 0;
     virtual std::list<ITool*>   GetTools () const = 0;
 };
-
-} // namespace plugin
-
+    
 typedef IPlugin* (*CreateFunction) (IAPI* api);
 typedef void     (*DestroyFunction)(IPlugin* plugin);
 typedef uint32_t (*VersionFunction)();
+
+} // namespace plugin
 
 #endif /* _PLUGIN_HPP_INCLUDED_ */
