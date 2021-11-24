@@ -2,6 +2,7 @@
 #define _PLUGIN_HPP_INCLUDED_
 
 #include <list>
+
 const uint32_t kVersion = 1;
 typedef uint32_t Color; // RGBA8888
 
