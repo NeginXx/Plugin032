@@ -4,6 +4,8 @@
 #include <cstdint>
 #include <list>
 
+namespace plugin {
+
 const uint32_t kVersion = 1;
 typedef uint32_t Color; // RGBA8888
 
@@ -154,5 +156,7 @@ class IPlugin {
     virtual std::list<IFilter*> GetFilters() const = 0;
     virtual std::list<ITool*>   GetTools () const = 0;
 };
+
+} // namespace plugin    
 
 #endif /* _PLUGIN_HPP_INCLUDED_ */
