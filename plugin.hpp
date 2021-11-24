@@ -1,6 +1,7 @@
 #ifndef _PLUGIN_HPP_INCLUDED_
 #define _PLUGIN_HPP_INCLUDED_
 
+#include <cstdint>
 #include <list>
 
 const uint32_t kVersion = 1;
