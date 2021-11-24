@@ -8,6 +8,8 @@ namespace plugin {
 
 const uint32_t kVersion = 1;
 typedef uint32_t Color; // RGBA8888
+    
+class ITexture;
 
 struct Buffer {
     Color* pixels;
