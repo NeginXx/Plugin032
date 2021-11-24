@@ -25,9 +25,9 @@ class ITexture {
     virtual int32_t GetWidth() = 0;
     virtual int32_t GetHieght() = 0;
 
-    virtual const Buffer& ReadBuffer() = 0;
-    virtual void          ReleaseBuffer(const Buffer& buffer) = 0;
-    virtual void          LoadBuffer(const Buffer& buffer) = 0;
+    virtual Buffer ReadBuffer() = 0;
+    virtual void ReleaseBuffer(const Buffer& buffer) = 0;
+    virtual void LoadBuffer(const Buffer& buffer) = 0;
 
     virtual void Clear(Color color) = 0;
     virtual void Present() = 0;
@@ -66,8 +66,8 @@ class IWidget {
   public:
     virtual ~IWidget() {}
 
-    virtual GetWidth() = 0;
-    virtual GetHieght() = 0;
+    virtual int32_t GetWidth() = 0;
+    virtual int32_t GetHieght() = 0;
 };
 
 class IButton : public IWidget {
@@ -154,7 +154,7 @@ class IPlugin {
   public:
     virtual ~IPlugin() {}
 
-    virtual std::list<IFilter*> GetFilter() const = 0;
+    virtual std::list<IFilter*> GetFilters() const = 0;
     virtual std::list<ITool*>   GetTools () const = 0;
 };
 
