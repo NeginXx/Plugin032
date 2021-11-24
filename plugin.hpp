@@ -113,7 +113,6 @@ class IWidgetFactory {
 
     virtual ISlider* CreateDefaultSlider(float range_min, float range_max) = 0;
     virtual ISlider* CreateSlider(int32_t width, int32_t height, float range_min, float range_max) = 0;
-
     virtual ISlider* CreateSlider(int32_t width, int32_t height, float thumb_width, float thumb_height, float range_min, float range_max) = 0;
 
     virtual ILabel*  CreateDefaultLabel(const char* text) = 0;
@@ -128,7 +127,7 @@ class IAPI {
 
     virtual IWidgetFactory*  GetWidgetFactory () = 0;
     virtual ITextureFactory* GetTextureFactory() = 0;
-}
+};
 
 class IFilter {
   public:
