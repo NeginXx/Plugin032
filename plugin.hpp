@@ -11,10 +11,6 @@ typedef IPlugin* (*CreateFunction) (IAPI* api);
 typedef void     (*DestroyFunction)(IPlugin* plugin);
 typedef uint32_t (*VersionFunction)();
 
-extern "C" IPlugin* Create (IAPI* api);
-extern "C" void     Destroy(IPlugin* plugin);
-extern "C" uint32_t Version();
-
 struct Buffer {
     Color* pixels;
     ITexture* texture;
