@@ -9,10 +9,6 @@ namespace plugin {
 const uint32_t kVersion = 1;
 typedef uint32_t Color; // RGBA8888
 
-typedef IPlugin* (*CreateFunction) (IAPI* api);
-typedef void     (*DestroyFunction)(IPlugin* plugin);
-typedef uint32_t (*VersionFunction)();
-
 struct Buffer {
     Color* pixels;
     ITexture* texture;
@@ -157,6 +153,10 @@ class IPlugin {
     virtual std::list<ITool*>   GetTools () const = 0;
 };
 
-} // namespace plugin    
+} // namespace plugin
+
+typedef IPlugin* (*CreateFunction) (IAPI* api);
+typedef void     (*DestroyFunction)(IPlugin* plugin);
+typedef uint32_t (*VersionFunction)();
 
 #endif /* _PLUGIN_HPP_INCLUDED_ */
