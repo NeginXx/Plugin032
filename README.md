@@ -138,7 +138,7 @@ class IAPI {
 
     virtual IWidgetFactory*  GetWidgetFactory () = 0;
     virtual ITextureFactory* GetTextureFactory() = 0;
-}
+};
 ```
 # Export classes #
 There are classes that plugin developer should implement and return them to app in ```Create``` function.
