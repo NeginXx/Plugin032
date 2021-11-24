@@ -24,8 +24,8 @@ class ITexture {
     virtual int32_t GetHieght() = 0;
 
     virtual Buffer ReadBuffer() = 0;
-    virtual void ReleaseBuffer(const Buffer& buffer) = 0;
-    virtual void LoadBuffer(const Buffer& buffer) = 0;
+    virtual void ReleaseBuffer(Buffer buffer) = 0;
+    virtual void LoadBuffer(Buffer buffer) = 0;
 
     virtual void Clear(Color color) = 0;
     virtual void Present() = 0;
